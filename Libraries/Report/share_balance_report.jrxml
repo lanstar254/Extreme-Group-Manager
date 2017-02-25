@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="combined_report" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="77a64cfe-e8dd-4ca5-8c13-db008d823e34">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from payments;]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="receipt" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="payment" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tip" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="transid" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="isprocessed" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="returnmsg" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="notes" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tendered" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cardname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="voucher" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="21" uuid="c75afb00-6784-4fbf-a148-b5dfec8d6205"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Lanstar Investments]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="21" width="555" height="18" uuid="21f1672c-db09-4c7a-aa3c-3640f406f554"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[P.O Box 64 -60205]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="21" width="53" height="15" uuid="20fa9329-1fe8-411c-af7e-a51dcec117b2"/>
+				<text><![CDATA[Print Date:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="53" y="21" width="100" height="15" uuid="1bc29768-8919-4ccb-a164-e4bb6a673c9d"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="16" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="169" height="16" uuid="cf1db165-69d4-45ea-bb86-1ee07fc638eb"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Member Balances Report]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="67" height="15" uuid="b3b4c986-76dd-4e24-a034-0f07f3e4bba1"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mem No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="1" width="67" height="15" uuid="f7de0507-70d8-4f5e-bf70-ab9b306b8ef4"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Pay No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="1" width="160" height="15" uuid="5bc00a7e-b788-4b00-96b8-03e284717856"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Member Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="1" width="60" height="15" uuid="f2a9ae8b-a6da-47b4-9cab-a5743d44d36f"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Shares]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="354" y="1" width="67" height="15" uuid="1f359a2c-dcdb-4189-b70d-3d62fbdd4b23"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Total deposit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="421" y="1" width="67" height="15" uuid="9b0849a9-83fe-4595-80c2-8b9e85d16d58"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Total Shares]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="1" width="67" height="15" uuid="651fe871-de9b-40fd-9212-94b8f375e9a4"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Ln Balance]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

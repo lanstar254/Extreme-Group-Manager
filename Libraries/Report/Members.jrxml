@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Members" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="365968e3-b807-4574-bb73-a6e59c970d88">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1"/>
+	<queryString>
+		<![CDATA[select * from payments;]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="receipt" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="payment" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tip" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="transid" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="isprocessed" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="returnmsg" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="notes" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tendered" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cardname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="voucher" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="20" uuid="48b659b2-b265-40df-98d0-53d0b8022d5b"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LANSTAR HOUSING INVESTEMENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="802" height="20" uuid="0ce44727-e0d0-416e-98a3-920094a3120a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[P.O BOX 64-60205]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="182" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="b5c37ee4-622c-4483-a630-1b271020500d"/>
+				<text><![CDATA[Names]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20" uuid="0def374d-a344-44aa-93f6-9927182c9a5b"/>
+				<text><![CDATA[Payroll No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="100" height="20" uuid="28567a16-b837-49b6-8952-17037255f3ce"/>
+				<text><![CDATA[Member No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="100" height="20" uuid="9103aa01-3230-4a26-9c6f-ddca85dcee4f"/>
+				<text><![CDATA[ID No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="100" height="20" uuid="e589710a-e332-41b5-9a03-ac86e9039af5"/>
+				<text><![CDATA[Cat E/F/D]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="100" width="100" height="20" uuid="753e7190-f08e-4462-947e-96767b7af0b2"/>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="120" width="100" height="20" uuid="2f3409b4-8165-4f40-a280-b99c727ef9a4"/>
+				<text><![CDATA[Reason]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="140" width="100" height="20" uuid="fdab598c-557c-4e2f-8c04-a9ac49923c2d"/>
+				<text><![CDATA[MFI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="160" width="100" height="20" uuid="6bc8d69d-be52-436e-b417-6652554165e3"/>
+				<text><![CDATA[Branch]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="40" width="100" height="20" uuid="bc402070-8223-46e4-9973-0200d33b8249"/>
+				<text><![CDATA[Scheme Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="40" width="100" height="20" uuid="8acc8da8-1cce-4474-a2b1-2909323b8fbc"/>
+				<text><![CDATA[Required]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="40" width="114" height="20" uuid="4cff79d7-1d3d-469e-8a6e-46cbb0b9c505"/>
+				<text><![CDATA[Paid Amt]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="40" width="82" height="20" uuid="fd18fe76-c17d-45cd-b9ae-b9eaa886c211"/>
+				<text><![CDATA[Default]]></text>
+			</staticText>
+			<line>
+				<reportElement x="252" y="0" width="1" height="180" uuid="e30aa68c-51af-481c-a988-c7665f03e81c"/>
+			</line>
+			<line>
+				<reportElement x="252" y="160" width="544" height="1" uuid="f67dd9ea-1662-419b-b8e9-e30d8a4f17ae"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="92" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="43" height="20" uuid="0aaa80f3-a4ff-4276-a217-79b4679cb4b4"/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="0" width="45" height="20" uuid="dd787071-e994-4f76-a25f-0d57e13ceb8b"/>
+				<text><![CDATA[Activity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="0" width="54" height="20" uuid="13efa0f4-febd-4104-8d51-79dce801e034"/>
+				<text><![CDATA[Document]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="208" y="0" width="58" height="20" uuid="49231171-ae0a-4da7-a7fa-e52d1dd32823"/>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="283" y="0" width="75" height="20" uuid="d7a9b585-f330-4cf8-91fb-6c61289a61fc"/>
+				<text><![CDATA[Paid Out[Debt]]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="358" y="0" width="75" height="20" uuid="99af084e-48d3-496b-8a9d-32bab34b7fd0"/>
+				<text><![CDATA[Paid In[Credit]]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="91" height="20" uuid="42144053-69a6-4fa5-b26c-dad0b24e94cf"/>
+				<text><![CDATA[Running balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="611" y="0" width="80" height="20" uuid="cd361f65-e4d9-4b79-a932-f3f7b22b7e47"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Int Paid[Credit]]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="701" y="0" width="89" height="20" uuid="edc17eca-8257-4d65-a371-0fe0a305f754"/>
+				<text><![CDATA[Running Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="535" y="0" width="64" height="20" uuid="c32ff82f-dc59-4270-b07f-4001b0c8c057"/>
+				<text><![CDATA[Int Crg[Debit]]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
