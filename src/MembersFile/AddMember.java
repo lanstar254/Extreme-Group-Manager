@@ -30,9 +30,9 @@ public class AddMember {
         setMember(member);
         con = DbConnect.createConnection();
         //if(getMember().getMember().getPhoto().equals(null)){
-           // addWithoutPhoto(getMember());
+            addWithoutPhoto(getMember());
         //}else{
-            addWithPhoto(getMember());
+            //addWithPhoto(getMember());
        // }
         DbConnect.closeConnection();
     }
@@ -41,8 +41,8 @@ public class AddMember {
     public boolean addWithPhoto(Members members){
         PreparedStatement st = null;
         try{
-            String insertWithPhoto = "INSERT INTO memberstable(idnumber,surname,fname,lname,dob,photo,gender,phon1,phon2,address,code,location,email,isEmloyed,employer,category)"
-                    + "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            String insertWithPhoto = "INSERT INTO memberstable(idnumber,surname,fname,lname,dob,photo,gender,phon1,phon2,address,code,location,email)"
+                    + "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
             st = con.prepareStatement(insertWithPhoto);
             st.setInt(1,members.getMember().getIdNo());
             st.setString(2,members.getMember().getSurname());
@@ -82,7 +82,7 @@ public class AddMember {
             st.setString(2,members.getMember().getSurname());
             st.setString(3,members.getMember().getfName());
             st.setString(4,members.getMember().getlName());
-            st.setDate(5, (Date) members.getMember().getDob());
+            st.setString(5,members.getMember().getDob().toString());
             //st.setBlob(6, members.getMember().getPhoto());
             st.setString(6,members.getMember().getGender());
             st.setString(7,members.getContDetails().getPhone1());

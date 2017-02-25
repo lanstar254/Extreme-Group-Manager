@@ -49,8 +49,8 @@ public class ListMembers {
             while(rs.next()){
                 //int memberId, Person member, ContactDetails contDetails, EmploymentDetails empDetails, ArrayList<NextOfKin> kins
                 //int idNo, String surname, String fName, String lName, Date dob, Blob photo, String gender
-                Person person = new Person(rs.getInt("memberstable.id"),rs.getString("memberstable.surname"),rs.getString("memberstable.fname"),
-                rs.getString("memberstable.lname"),rs.getDate("memberstable.dob"),rs.getBlob("memberstable.photo"),rs.getString("memberstable.gender"));
+                Person person = new Person(rs.getInt("memberstable.Memberid"),rs.getString("memberstable.surname"),rs.getString("memberstable.fname"),
+                rs.getString("memberstable.lname"),rs.getDate("memberstable.dob"),rs.getString("memberstable.gender"));
                 //String phone1, String phone2, String address, int code, String location, String email
                 ContactDetails details = new ContactDetails(rs.getString("memberstable.phon1"),rs.getString("memberstable.phon2"),rs.getString("memberstable.address"),
                         rs.getInt("memberstable.code"),rs.getString("memberstable.location"),rs.getString("memberstable.email"));
@@ -83,7 +83,7 @@ public class ListMembers {
                 //int memberId, Person member, ContactDetails contDetails, EmploymentDetails empDetails, ArrayList<NextOfKin> kins
                 //int idNo, String surname, String fName, String lName, Date dob, Blob photo, String gender
                 Person person = new Person(rs.getInt("memberstable.id"),rs.getString("memberstable.surname"),rs.getString("memberstable.fname"),
-                rs.getString("memberstable.lname"),rs.getDate("memberstable.dob"),rs.getBlob("memberstable.photo"),rs.getString("memberstable.gender"));
+                rs.getString("memberstable.lname"),rs.getDate("memberstable.dob"),rs.getString("memberstable.gender"));
                 //String phone1, String phone2, String address, int code, String location, String email
                 ContactDetails details = new ContactDetails(rs.getString("memberstable.phon1"),rs.getString("memberstable.phon2"),rs.getString("memberstable.address"),
                         rs.getInt("memberstable.code"),rs.getString("memberstable.location"),rs.getString("memberstable.email"));
